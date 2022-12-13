@@ -26,6 +26,7 @@ namespace CarLotSimulator
             car1.IsDriveable = true;
             car1.EngineNoise = "vroom";
             car1.HonkNoise = "beep";
+            Console.WriteLine($"Cars in car lot {CarLot.numberOfCars}");
             //Console.WriteLine($"My car is a {car1.Year} {car1.Make} {car1.Model} and it's {car1.IsDriveable} that it's driveable");
             //car1.MakeEngineNoise();
             //car1.MakeHonkNoise();
@@ -37,6 +38,7 @@ namespace CarLotSimulator
             car2.IsDriveable = false;
             car2.EngineNoise = "vroom";
             car2.HonkNoise = "beep";
+            Console.WriteLine($"Cars in car lot {CarLot.numberOfCars}");
             //Console.WriteLine($"My car is a {car2.Year} {car2.Make} {car2.Model} and it's {car2.IsDriveable} that it's driveable");
             //car2.MakeEngineNoise();
             //car2.MakeHonkNoise();
@@ -59,7 +61,12 @@ namespace CarLotSimulator
                 IsDriveable = true,
                 EngineNoise = "vroom",
                 HonkNoise = "beep"
+                
             };
+            Console.WriteLine($"Cars in car lot {CarLot.numberOfCars}");
+
+            Car car4 = new Car("Dodge", "Hellcat", 2016, true, "vrooom", "honk");
+            Console.WriteLine($"Cars in car lot {CarLot.numberOfCars}");
 
             //*************BONUS*************//
 
@@ -71,7 +78,7 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
-            CarLot.ParkingLot = new List<Car>() { car1, car2, car3 };
+            CarLot.ParkingLot = new List<Car>() { car1, car2, car3, car4 };
             {
                 foreach (var car in CarLot.ParkingLot )
                 {
